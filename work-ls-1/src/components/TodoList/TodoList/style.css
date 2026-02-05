@@ -1,0 +1,73 @@
+.allStyle{
+    display: flex;
+    width: 1585px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.todoList{
+    background: white;
+    width: 450px;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    gap: 20px;
+    color: #000000;
+    border: #ffff 2px solid;
+    border-radius: 10px;
+
+}
+
+.inputEnter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+.inputEnter input{
+    border-radius: 5px;
+    width: 250px;
+    height: 35px;
+}
+
+.listTodo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 360px;
+    font-size: 20px;
+}
+
+.btnDiv{
+    width: 360px;
+    justify-content: end;
+    display: flex;
+}
+
+.addBtn{
+    background-color: #2edb03;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: #000000 1px solid;
+    padding: 10px;
+}
+
+.deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    background: rgb(255, 54, 54);
+}
+
+.checkboxInp{
+    width: 30px;
+    height: 20px;
+}
