@@ -5,7 +5,7 @@ import './style.css'
 const TodoList = () => {
    const [text, setText] = useState('')
 
-   const { todos, createTodo, deleteTodo} = useTodos()
+   const { todos, createTodo, toggleTodo, deleteTodo } = useTodos()
    const onCreate = () => {
        createTodo(text)
        setText('')
@@ -22,10 +22,18 @@ const TodoList = () => {
                 <button onClick={onCreate} className='addBtn'>Add</button>
             </div>
             <ul className='listTodo'>
-                {todos.map(todo => (
-                    <li key={todo.id} className='list'>
-                        {todo.title}
-                        <input className='checkboxInp' type="checkbox" value={todo.isCompleted} onChange={() => {}} />
+                {todos.map((todo) => (
+                    <li
+                        key={todo.id}
+                        className={`list ${todo.isCompleted ? 'listCompleted' : ''}`}
+                    >
+                        <span className='todoTitle'>{todo.title}</span>
+                        <input
+                            className='checkboxInp'
+                            type="checkbox"
+                            checked={todo.isCompleted}
+                            onChange={() => toggleTodo(todo.id)}
+                        />
                         <div className='btnDiv'>
                             <button onClick={() => deleteTodo(todo.id)} className='deleteBtn'>Delete</button>
                         </div>

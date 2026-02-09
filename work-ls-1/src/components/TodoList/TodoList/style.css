@@ -1,73 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background: #f7f8fb;
+    color: #000000;
+}
+
 .allStyle{
+    min-height: 100vh;
     display: flex;
-    width: 1585px;
-    align-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    padding: 32px 16px;
 }
 
 .todoList{
-    background: white;
-    width: 450px;
+    background: #ffffff;
+    width: 100%;
+    max-width: 520px;
     display: flex;
-    height: 500px;
+    min-height: 520px;
     flex-direction: column;
     gap: 20px;
-    color: #000000;
-    border: #ffff 2px solid;
-    border-radius: 10px;
-
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
 }
 
 .inputEnter{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding-top: 15px;
+    gap: 12px;
 }
+
 .inputEnter input{
-    border-radius: 5px;
-    width: 250px;
-    height: 35px;
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 12px 14px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 .listTodo{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    width: 360px;
-    font-size: 20px;
+    gap: 12px;
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .btnDiv{
-    width: 360px;
-    justify-content: end;
+    margin-left: auto;
     display: flex;
 }
 
 .addBtn{
-    background-color: #2edb03;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 16px;
+    background-color: #2f7cff;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.08s ease, background-color 0.2s ease;
+}
+
+.addBtn:hover{
+    background-color: #2563eb;
+}
+
+.addBtn:active{
+    transform: translateY(1px);
 }
 
 .list{
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: #000000 1px solid;
-    padding: 10px;
+    gap: 10px;
+    border: 1px solid #e5e7eb;;
+    border-radius: 14px;
+    padding: 12px 14px;
+    background: #ffffff;
 }
 
 .deleteBtn{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 50px;
-    background: rgb(255, 54, 54);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    background: #ef4444;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.08s ease, background-color 0.2s ease;
+}
+
+.deleteBtn:hover{
+    background: #dc2626;
 }
 
 .checkboxInp{
-    width: 30px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+.listCompleted{
+    opacity: 0.6;
+}
+
+.todoTitle{
+    flex: 1;
+}
+
+.listCompleted .todoTitle{
+    text-decoration: line-through;
 }
